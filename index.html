@@ -5,40 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Bill
+  <img src="images/logo.svg" alt="Splitter" class="site-logo">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+  <main class="main">
 
-  Number of People
+    <div class="data-input">
+      <p class="data-input__header">
+        Bill
+      </p>
+      <form novalidate class="data-input__form">
+        <input type="text" class="data-input__input">
+      </form>
+      <p class="data-input__header">
+        Select Tip %
+      </p>
+      
+      <div class="data-input__tips">
+        <button class="data-input__tip">5%</button>
+        <button class="data-input__tip">10%</button>
+        <button class="data-input__tip">15%</button>
+        <button class="data-input__tip">25%</button>
+        <button class="data-input__tip">50%</button>
+        <button class="data-input__tip">Custom</button>
+      </div>
+    
+      <p class="data-input__header">
+        Number of People
+      </p>
 
-  Tip Amount
-  / person
+      <form novalidate class="data-input__form">
+        <input type="text" class="data-input__input">
+      </form>
 
-  Total
-  / person
+    </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="data-result">
+      
+      Tip Amount
+      / person
+    
+      Total
+      / person
+    
+      <button class="data-result__button">
+        Reset
+      </button>
+      
+    </div>
+
+  </main>
+
 </body>
 </html>

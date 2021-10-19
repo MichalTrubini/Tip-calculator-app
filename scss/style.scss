@@ -1,2 +1,23 @@
 @import 'variables','settings','normalize';
 
+body {
+    background-color: $background-body;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-logo {
+    width:87px;
+    margin-top:5rem;
+    margin-bottom:4rem;
+}
+
+.main {
+    background-color: $background-main;
+    width:37.5rem;
+    padding:3.2rem;
+    border-radius:25px 25px 0 0;
+    display:flex;
+    flex-direction: column;
+}

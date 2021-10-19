@@ -6,6 +6,13 @@ $Dark-grayish-cyan: hsl(186, 14%, 43%);
 $Dark-grayish-cyan: hsl(184, 14%, 56%);
 $Light-grayish-cyan: hsl(189, 41%, 97%);
 $White: hsl(0, 0%, 100%);
+$Light-cyan:#c5e4e7;
 
 //ui
 
+$background-body:$Light-cyan;
+$background-main:$White;
+$background-input:$Light-grayish-cyan;
+$background-tips:$Very-dark-cyan;
+$background-result:$Very-dark-cyan;
+$background-tips-selected:$Strong-cyan;
