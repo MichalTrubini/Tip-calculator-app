@@ -5,6 +5,31 @@ body {
     display:flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Space mono', monospace;
+    font-weight: 700;
+}
+
+button, input {
+    font-weight: 700;
+    border:none;
+    border-radius: 5px;
+    outline:none;
+}
+
+input {
+    width:100%;
+    background-color: $background-input;
+    margin:0.6rem 0 3.2rem;
+    height:48px;
+    padding:0 1.7rem;
+    font-size:2.4rem;
+    color:$color-text-input;
+    text-align: right;
+}
+
+input:hover {
+    outline:2px solid $outline-input-hover;
+    cursor: pointer;
 }
 
 .site-logo {
@@ -15,9 +40,96 @@ body {
 
 .main {
     background-color: $background-main;
-    width:37.5rem;
-    padding:3.2rem;
+    max-width:37.5rem;
+    padding:3.2rem 0;
     border-radius:25px 25px 0 0;
     display:flex;
     flex-direction: column;
+}
+
+.data-input {
+    max-width:31.1rem;
+    &__header {
+        color:$color-header;
+        font-size:1.6rem;
+        line-height:2.37rem;
+    }
+
+    &__form {
+        position: relative;
+    }
+
+    &__icon {
+        position:absolute;
+        top:20px;
+        left: 20px;
+    }
+
+    &__tips {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:1.6rem;
+        margin:1.6rem 0 3.2rem;
+    }
+
+    &__tip {
+        color:$color-text-main;
+        background-color: $background-tips;
+        font-size:2.4rem;
+        line-height:3.554rem;
+        padding:0.6rem;
+    }
+
+    &__tip:hover {
+        cursor: pointer;
+        background-color: $background-tips-selected;
+        color:$color-text-input-hover;
+    }
+}
+
+::placeholder {
+    text-align: right;
+    color:$color-text-input;
+    opacity: 0.35;
+}
+
+.data-result {
+    max-width:32.7rem;
+    background-color: $background-result;
+    border-radius:5px;
+    padding:3.7rem 2.4rem 2.4rem;
+
+    &__amount {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__amount-header {
+        color:$color-text-main;
+        font-size:1.6rem;
+        line-height:2.37rem;
+    }
+
+    &__amount-person {
+        color:$color-text-result-person;
+        font-size:1.3rem;
+        line-height:1.925rem;
+    }
+
+    &__amount-total {
+        font-size:3.2rem;
+        color:$color-text-result-amount;
+        letter-spacing: -0.67px;
+    }
+
+    &__button {
+        width:100%;
+        background-color: $background-results-button;
+        color:$color-text-input;
+        font-size:2rem;
+        height:48px;
+        margin-top:3.2rem;
+        text-transform: uppercase;
+    }
 }

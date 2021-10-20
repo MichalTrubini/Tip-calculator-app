@@ -24,7 +24,8 @@
         Bill
       </p>
       <form novalidate class="data-input__form">
-        <input type="text" class="data-input__input">
+        <img src="images/icon-dollar.svg" alt="dollar" class="data-input__icon">
+        <input type="text" class="data-input__input" placeholder="0">
       </form>
       <p class="data-input__header">
         Select Tip %
@@ -44,19 +45,40 @@
       </p>
 
       <form novalidate class="data-input__form">
-        <input type="text" class="data-input__input">
+        <img src="images/icon-person.svg" alt="dollar" class="data-input__icon">
+        <input type="text" class="data-input__input" placeholder="0">
       </form>
 
     </div>
 
     <div class="data-result">
       
-      Tip Amount
-      / person
-    
-      Total
-      / person
-    
+      <div class="data-result__amount">
+        <div>
+          <p class="data-result__amount-header">
+            Tip Amount
+          </p>
+          <p class="data-result__amount-person">
+            / person
+          </p>
+        </div>
+        <p class="data-result__amount-total">
+          $0.00
+        </p>
+      </div>
+      <div class="data-result__amount">
+        <div>
+          <p class="data-result__amount-header">
+            Total
+          </p>
+          <p class="data-result__amount-person">
+            / person
+          </p>
+        </div>
+        <p class="data-result__amount-total">
+          $0.00
+        </p>
+      </div>
       <button class="data-result__button">
         Reset
       </button>
