@@ -129,6 +129,10 @@ input:hover {
         align-items: center;
     }
 
+    &__amount:first-child {
+        margin-bottom: 2rem;
+    }
+
     &__amount-header {
         color:$color-text-main;
         font-size:1.6rem;
@@ -160,5 +164,61 @@ input:hover {
     &__button:hover {
         cursor: pointer;
         background-color: $background-tips-selected;
+    }
+}
+
+@media screen and (min-width:920px) {
+
+    .main {
+        max-width:92rem;
+        width:100%;
+        border-radius:25px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding:3.2rem 4.8rem;
+    }
+
+    .data-input {
+        max-width:37.9rem;
+        padding:0;
+        margin:0;
+        height:388px;
+
+        &__tips {
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-bottom:4rem;
+        }
+
+        &__input {
+            margin-bottom:0;
+        }
+
+        &__form {
+            margin-bottom:4rem;
+        }
+    }
+
+    .data-result {
+        max-width: 41.3rem;
+        border-radius: 15px;
+        height:41.7rem;
+        padding:4rem;
+        margin:0;
+
+        &__amount:first-child {
+            margin-bottom:4rem;
+        }
+
+        &__amount-total {
+            font-size:4.8rem;
+            letter-spacing: -1px;
+        }
+
+        &__button {
+            position:relative;
+            bottom:-110px;
+        }
+
     }
 }

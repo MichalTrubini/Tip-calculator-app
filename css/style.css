@@ -349,6 +349,10 @@ input:hover {
           align-items: center;
 }
 
+.data-result__amount:first-child {
+  margin-bottom: 2rem;
+}
+
 .data-result__amount-header {
   color: white;
   font-size: 1.6rem;
@@ -380,5 +384,59 @@ input:hover {
 .data-result__button:hover {
   cursor: pointer;
   background-color: #a1e8e0;
+}
+
+@media screen and (min-width: 920px) {
+  .main {
+    max-width: 92rem;
+    width: 100%;
+    border-radius: 25px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 3.2rem 4.8rem;
+  }
+  .data-input {
+    max-width: 37.9rem;
+    padding: 0;
+    margin: 0;
+    height: 388px;
+  }
+  .data-input__tips {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 4rem;
+  }
+  .data-input__input {
+    margin-bottom: 0;
+  }
+  .data-input__form {
+    margin-bottom: 4rem;
+  }
+  .data-result {
+    max-width: 41.3rem;
+    border-radius: 15px;
+    height: 41.7rem;
+    padding: 4rem;
+    margin: 0;
+  }
+  .data-result__amount:first-child {
+    margin-bottom: 4rem;
+  }
+  .data-result__amount-total {
+    font-size: 4.8rem;
+    letter-spacing: -1px;
+  }
+  .data-result__button {
+    position: relative;
+    bottom: -110px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

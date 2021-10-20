@@ -23,9 +23,9 @@
       <p class="data-input__header">
         Bill
       </p>
-      <form novalidate class="data-input__form">
+      <form class="data-input__form">
         <img src="images/icon-dollar.svg" alt="dollar" class="data-input__icon">
-        <input type="text" class="data-input__input" placeholder="0">
+        <input novalidate type="number" min="0" step=".01" class="data-input__input" placeholder="0">
       </form>
       <p class="data-input__header">
         Select Tip %
@@ -38,7 +38,7 @@
         <button class="data-input__tip">25%</button>
         <button class="data-input__tip">50%</button>
         <div>
-          <input novalidate class="data-input__tip data-input__tip-custom" placeholder="Custom">
+          <input novalidate type="number" class="data-input__tip data-input__tip-custom" placeholder="Custom">
         </div>
       </div>
     
@@ -48,7 +48,7 @@
 
       <form novalidate class="data-input__form">
         <img src="images/icon-person.svg" alt="dollar" class="data-input__icon">
-        <input type="text" class="data-input__input" placeholder="0">
+        <input novalidate type="number" class="data-input__input" placeholder="0">
       </form>
 
     </div>
