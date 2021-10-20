@@ -41,6 +41,7 @@ input:hover {
 .main {
     background-color: $background-main;
     max-width:37.5rem;
+    width:100%;
     padding:3.2rem 0;
     border-radius:25px 25px 0 0;
     display:flex;
@@ -49,6 +50,10 @@ input:hover {
 
 .data-input {
     max-width:31.1rem;
+    padding:0 3.1rem;
+    box-sizing: content-box;
+    margin:auto;
+
     &__header {
         color:$color-header;
         font-size:1.6rem;
@@ -85,6 +90,23 @@ input:hover {
         background-color: $background-tips-selected;
         color:$color-text-input-hover;
     }
+
+    &__tip-custom {
+        background-color:$background-tip-custom;
+        margin:0;
+        color:$color-text-input;
+        padding-right:1.3rem;
+    }
+
+    &__tip-custom:hover {
+        background-color: inherit;
+    }
+
+    &__tip-custom::placeholder {
+        text-align: center;
+        color:hsla(180, 18%, 40%, 1);
+        opacity:1;
+    }
 }
 
 ::placeholder {
@@ -95,6 +117,8 @@ input:hover {
 
 .data-result {
     max-width:32.7rem;
+    width:87%;
+    margin:auto;
     background-color: $background-result;
     border-radius:5px;
     padding:3.7rem 2.4rem 2.4rem;
@@ -131,5 +155,10 @@ input:hover {
         height:48px;
         margin-top:3.2rem;
         text-transform: uppercase;
+    }
+
+    &__button:hover {
+        cursor: pointer;
+        background-color: $background-tips-selected;
     }
 }
