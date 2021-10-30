@@ -236,6 +236,24 @@ input:hover {
   line-height: 2.37rem;
 }
 
+.data-input__header-error {
+  color: #e17456;
+  font-size: 1.6rem;
+  display: none;
+}
+
+.data-input__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .data-input__form {
   position: relative;
 }
@@ -384,6 +402,16 @@ input:hover {
 .data-result__button:hover {
   cursor: pointer;
   background-color: #a1e8e0;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 @media screen and (min-width: 920px) {

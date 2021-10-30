@@ -60,6 +60,18 @@ input:hover {
         line-height:2.37rem;
     }
 
+    &__header-error {
+        color: hsla(13, 70%, 61%, 1);
+        font-size: 1.6rem;
+        display:none;
+    }
+
+    &__container {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__form {
         position: relative;
     }
@@ -165,6 +177,15 @@ input:hover {
         cursor: pointer;
         background-color: $background-tips-selected;
     }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 @media screen and (min-width:920px) {
