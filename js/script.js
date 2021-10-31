@@ -2,6 +2,8 @@
 
 const inputBillElement = document.getElementById('input-bill');
 const tipElement = document.querySelectorAll('.tip-percent');
+const tipParentElement = document.querySelector('.data-input__tips');
+const tipChildrenElements = tipParentElement.children;
 const tipPercentCustomElement = document.getElementById('tip-percent-custom');
 const numberOfPeopleElement = document.getElementById('number-of-people');
 const tipPerPersonElement = document.getElementById('tip-per-person');
@@ -34,6 +36,14 @@ function getTipPercent(tip){
     tip.addEventListener('click',function(){
         const tipNumber = parseInt(tip.textContent.replace('%','')) / 100;
         localStorage.setItem('tip',tipNumber);
+        for (let item of tipChildrenElements)
+            if (item.classList.contains('data-input__tip-selected')) {
+                item.classList.remove('data-input__tip-selected')
+            }
+            else {
+                tip.classList.add('data-input__tip-selected');
+            };
+        
         calculateTip();
     })  
 }
@@ -80,4 +90,6 @@ function clearLocalStorage () {
     inputBillElement.value = null;
     numberOfPeopleElement.value = null;
     tipPercentCustomElement.value = null;
+    for (let item of tipChildrenElements)
+        item.classList.remove('data-input__tip-selected');
 }

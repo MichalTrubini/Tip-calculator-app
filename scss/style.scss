@@ -103,6 +103,11 @@ input:hover {
         color:$color-text-input-hover;
     }
 
+    &__tip-selected {
+        background-color: $background-tips-selected;
+        color:$color-text-input-hover;
+    }
+
     &__tip-custom {
         background-color:$background-tip-custom;
         margin:0;
