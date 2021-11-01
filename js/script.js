@@ -18,7 +18,20 @@ tipPercentCustomElement.addEventListener('input',customPercentage)
 numberOfPeopleElement.addEventListener('input',numberPeople);
 clearStorage.addEventListener('click',clearLocalStorage);
 
+//PREVENT NEGATIVE VALUES ADDED BY USER
+
+inputBillElement.onkeydown = preventNegativeNumbers;
+numberOfPeopleElement.onkeydown = preventNegativeNumbers;
+
 //FUNCTIONS
+
+function preventNegativeNumbers (e) {
+    if(!((e.keyCode > 95 && e.keyCode < 106)
+      || (e.keyCode > 47 && e.keyCode < 58) 
+      || e.keyCode == 8)) {
+        return false;
+    }
+}
 
 function billAmount () {
     const billAmount = inputBillElement.value;
@@ -92,4 +105,8 @@ function clearLocalStorage () {
     tipPercentCustomElement.value = null;
     for (let item of tipChildrenElements)
         item.classList.remove('data-input__tip-selected');
+}
+
+window.onunload = function () {
+	localStorage.clear();
 }
